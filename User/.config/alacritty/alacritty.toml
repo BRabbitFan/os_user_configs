@@ -9,7 +9,7 @@ import = [
 # args = ["--login"]  # work for macOS, pass some user defineds to shell like homebrew env vars
 
 [font]
-normal = { family = "Maple Mono Normal NL SL NF CN", style = "Regular" }
+normal = { family = "Maple Mono NL SL NF CN", style = "Regular" }
 # size = 14.0
 
 # [window]
