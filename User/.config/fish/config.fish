@@ -15,6 +15,7 @@ end
 
 # rust package management (cargo)
 export PATH="$HOME/.cargo/bin:$PATH"
+# source /opt/homebrew/opt/rustup/share/fish/vendor_completions.d/rustup.fish  # macos rustup completions
 
 # wsltty
 set -x DONT_PROMPT_WSL_INSTALL 1
