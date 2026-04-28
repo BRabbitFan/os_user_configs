@@ -1,6 +1,7 @@
 [general]
 import = [
-  "~/.config/alacritty/dank-theme.toml"
+  # https://github.com/alacritty/alacritty-theme
+  "~/.config/alacritty/themes/themes/one_dark.toml"
 ]
 
 # [terminal.shell]
