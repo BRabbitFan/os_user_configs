@@ -3,6 +3,10 @@ import = [
   "~/.config/alacritty/dank-theme.toml"
 ]
 
+# [terminal.shell]
+# program = "/opt/homebrew/bin/fish"
+# args = ["--login"]  # work for macOS, pass some user defineds to shell like homebrew env vars
+
 [font]
 normal = { family = "Maple Mono Normal NL SL NF CN", style = "Regular" }
 # size = 14.0
