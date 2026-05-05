@@ -1,6 +1,6 @@
 # unix locale settings
-set -x LANG zh_CN.UTF-8
-set -x LC_ALL zh_CN.UTF-8
+# set -x LANG zh_CN.UTF-8
+# set -x LC_ALL zh_CN.UTF-8
 
 # python virtualenv
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1  # disable default prompt (use fish theme instead)

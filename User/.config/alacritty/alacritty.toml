@@ -1,6 +1,6 @@
 [general]
 import = [
-  # https://github.com/alacritty/alacritty-theme
+  # git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
   "~/.config/alacritty/themes/themes/one_dark.toml"
 ]
 
