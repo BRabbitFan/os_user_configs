@@ -1,0 +1,114 @@
+# 派生自的风格
+#   LLVM
+#   Google
+#   Chromium
+#   Mozilla
+#   WebKit
+#   Microsoft
+#   GNU
+BasedOnStyle: Google
+
+# 行最大宽度
+ColumnLimit: 120
+
+# 缩进宽度
+IndentWidth: 2
+
+# 折行缩进宽度
+ContinuationIndentWidth: 4
+
+---
+
+Language: Cpp
+
+# 命名空间缩进
+#   None 不缩进
+#   Inner 最外层的不缩进, 内部的缩进
+#   All 全都缩进
+NamespaceIndentation: All
+
+# 是否删除统一初始化列表大括号内的空格
+#   true: foo{arg}
+#   false: foo{ arg }
+Cpp11BracedListStyle: false
+
+# 访问修饰符的偏移 (相对于成员属性/方法)
+AccessModifierOffset: -1
+
+# include 语句的排序优先级
+IncludeCategories:
+   - Regex: '<[a-z_]+>'  # <string> <file_system>
+     Priority: 1
+   - Regex: '<[a-zA-Z_-/]+>'  # <QtCore/QObject>
+     Priority: 2
+   - Regex: '<[a-zA-Z_-]+\.(h|hh|hpp)>'  # <global.hpp>
+     Priority: 3
+   - Regex: '<[a-zA-Z_-/]+\.(h|hh|hpp)>'  # <boost/any.hpp>
+     Priority: 4
+   - Regex: '"[a-z_]+"'  # "string" "file_system"
+     Priority: 5
+   - Regex: '"[a-zA-Z_-/]+"'  # "QtCore/QObject"
+     Priority: 6
+   - Regex: '"[a-zA-Z_-]+\.(h|hh|hpp)"'  # "global.hpp"
+     Priority: 7
+   - Regex: '"[a-zA-Z_-/]+\.(h|hh|hpp)"'  # "boost/any.hpp"
+     Priority: 8
+
+# 左括号"(, [, {"后参数一行写不下时的对齐方式:
+#   Align 优先放在当前行, 当前行放不下时在下一行对其前一个参数的左侧
+#   DontAlign 优先放在当前行, 当前行放不下时以换行缩进方式对其
+#   AlwaysBreak 全部以换行缩进方式对其
+#   BlockIndent 所有参数优先放在下一行
+AlignAfterOpenBracket: Align
+
+# 连续赋值时，对齐所有等号
+AlignConsecutiveAssignments: true
+
+# 连续声明时，对齐所有声明的变量名
+AlignConsecutiveDeclarations: true
+
+# 允许短的函数写在同一行
+#   None 不放在同一行
+#   InlineOnly
+#   Empty(空函数)
+#   Inline(定义在类中，空函数)
+#   All
+AllowShortFunctionsOnASingleLine: Empty
+
+# 允许短的 if 语句写在同一行
+AllowShortIfStatementsOnASingleLine: false
+
+# 允许短的 循环 语句写在同一行
+AllowShortLoopsOnASingleLine: false
+
+# 声明部分, 当所有参数一行写不下的时候, 尽可能写满第一行再换行
+#   true:  void func(auto arg_a, auto arg_b,
+#                    auto arg_c) {}
+#   false: void func(auto arg_a,
+#                    auto arg_b,
+#                    auto arg_c) {}
+BinPackParameters: false
+
+# 同上, 但是是定义部分
+BinPackArguments: false
+
+# 构造函数初始值设定项, 要么全写在一行, 要么各写一行
+#   true:  Object()
+#            : property_a_{ ... }, property_b_{ ... }
+#            , property_c_{ ... }
+#   false: Object()
+#            : property_a_{ ... }
+#            , property_b_{ ... }
+#            , property_c_{ ... }
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+
+# 构造函数初始值设定项换行时, 逗号在前:
+#  true:  Object()
+#           : property_a_{ ... }
+#           , property_b_{ ... }
+#  false: Object()
+#           : property_a_{ ... },
+#             property_b_{ ... }
+BreakConstructorInitializersBeforeComma: true
+
+---
