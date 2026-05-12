@@ -2,5 +2,7 @@ patch:
   # 这里的 rime_ice_suggestion 为雾凇方案的默认预设
   __include: rime_ice_suggestion:/
 
-  menu:
-    page_size: 7  # 每页候选词数
+  ascii_composer/switch_key/Shift_L: commit_code  # 中英文临时切换: 左 Shift , 已编辑的文本提交英文
+  ascii_composer/switch_key/Shift_R: commit_text  # 中英文临时切换: 右 Shift , 已编辑的文本提交中文
+
+  menu/page_size: 7  # 每页候选词数
